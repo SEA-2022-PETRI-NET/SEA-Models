@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-namespace SEA_Models.Domain.Model.PetriNet;
+namespace SEA_Models.PetriNet;
 
 public class Transition
 {

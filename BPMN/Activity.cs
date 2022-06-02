@@ -1,4 +1,4 @@
-namespace SEA_Models.Domain.Model.BPMN;
+namespace SEA_Models.BPMN;
 
 public class Activity : Node
 {

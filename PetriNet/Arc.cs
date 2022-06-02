@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
-namespace SEA_Models.Domain.Model.PetriNet;
+namespace SEA_Models.PetriNet;
 
-public class Arc
+public interface Arc
 {
     [JsonIgnore]
     public int Id { get; set; }

@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace SEA_Models.Domain.Model.BPMN;
+namespace SEA_Models.BPMN;
 
 public class Bpmn : IEnumerable<Node>
 {
