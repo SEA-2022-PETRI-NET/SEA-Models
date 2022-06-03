@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SEA_Models.PetriNet;
 
-public interface Arc
+public class Arc
 {
     [JsonIgnore]
     public int Id { get; set; }
