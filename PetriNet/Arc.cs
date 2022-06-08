@@ -1,15 +1,18 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-namespace SEA_Models.Domain.Model.PetriNet;
+using Microsoft.EntityFrameworkCore;
 
-public class Transition
+namespace SEA_Models.PetriNet;
+
+public class Arc
 {
+    [JsonIgnore]
     public int Id { get; set; }
     
-    public int TransitionId { get; set; }
+    public int SourceNode { get; set; }
     
-    public string? Name { get; set; }
+    public int TargetNode { get; set; }
     
     [JsonIgnore]
     public int? PetriNetId { get; set; }

@@ -1,9 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-using Microsoft.EntityFrameworkCore;
 
-namespace SEA_Models.Domain.Model.PetriNet;
+namespace SEA_Models.PetriNet;
 
 public class Place
 {
@@ -12,11 +10,17 @@ public class Place
     public int PlaceId { get; set; }
     public string? Name { get; set; }
     
-    [Range(0, int.MaxValue)]
-    public int? NumberOfTokens { get; set; }
     
     [JsonIgnore]
     public int? PetriNetId { get; set; }
     [JsonIgnore]
     public PetriNet? PetriNet { get; set; }
+    
+    public bool? isUrgent { get; set; }
+
+    // We should either you one or the other of these two fields.
+    // This depends on if we are working with a coloured petri net or not. 
+    [Range(0, int.MaxValue)]
+    public int? NumberOfTokens { get; set; } 
+    public List<Token>? Tokens { get; set; }
 }
