@@ -9,6 +9,8 @@ public class Token
     public int TokenId { get; set; }
     public string? Name { get; set; }
     
+    public int? Age { get; set; }
+    
     [JsonIgnore]
     public int? PlaceId { get; set; }
     [JsonIgnore]

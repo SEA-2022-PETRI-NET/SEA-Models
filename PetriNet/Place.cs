@@ -16,6 +16,8 @@ public class Place
     [JsonIgnore]
     public PetriNet? PetriNet { get; set; }
     
+    public int? maxAge { get; set; }
+    
     public bool? isUrgent { get; set; }
 
     // We should either you one or the other of these two fields.
