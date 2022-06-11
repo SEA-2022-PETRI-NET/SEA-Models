@@ -15,4 +15,6 @@ public class Transition
     public int? PetriNetId { get; set; }
     [JsonIgnore]
     public PetriNet? PetriNet { get; set; }
+    
+    public Position? position { get; set; }
 }
