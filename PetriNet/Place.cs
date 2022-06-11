@@ -20,9 +20,11 @@ public class Place
     
     public bool? isUrgent { get; set; }
 
-    // We should either you one or the other of these two fields.
+    // We should either use one or the other of these two fields.
     // This depends on if we are working with a coloured petri net or not. 
     [Range(0, int.MaxValue)]
     public int? NumberOfTokens { get; set; } 
     public List<Token>? Tokens { get; set; }
+
+    public Position? position { get; set; }
 }
